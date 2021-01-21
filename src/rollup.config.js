@@ -7,19 +7,19 @@ import resolve from 'rollup-plugin-node-resolve'
 import url from 'rollup-plugin-url'
 import svgr from '@svgr/rollup'
 
-import pkg from './package.json'
+import pkg from '../package.json'
 
 export default {
-  input: 'src/index.ts',
+  input: 'index.ts',
   output: [
     {
-      file: pkg.main,
+      file: "../" + pkg.main,
       format: 'cjs',
       exports: 'named',
       sourcemap: true
     },
     {
-      file: pkg.module,
+      file: "../" + pkg.module,
       format: 'es',
       exports: 'named',
       sourcemap: true

@@ -2,12 +2,13 @@ import * as React from 'react'
 import { camelToTitle, titleToKebab, kebabToSnake } from './util'
 import styles from './fieldz.css'
 
+export type Errors = string[] | string | Error[] | void
+
 export type UseTextPropsObj = {
   name?: string
   validate?: (input: string) => Errors
   init?: string
 }
-export type Errors = string[] | string | Error[] | void
 
 type CE = React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
 type KBE = React.KeyboardEvent
